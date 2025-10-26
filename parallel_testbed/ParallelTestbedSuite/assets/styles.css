@@ -1,0 +1,12 @@
+/* Button default style */
+button {
+  transition: all 0.1s ease-in-out;
+}
+
+/* Pressed effect */
+button:active {
+  transform: scale(0.95);
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.6) inset;
+  background-color: #00FFAA !important;
+  color: #1E1E2F !important;
+}
