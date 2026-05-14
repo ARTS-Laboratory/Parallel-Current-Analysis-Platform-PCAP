@@ -1,0 +1,243 @@
+/*styles.css*/
+/* Container */
+html, body, #react-entry-point {
+    background-color: #C4C4C4 !important; /* charcoal grey */
+    height: 100%;
+}
+/* Graph container */
+.plots-wrap { padding: 12px; max-width: 1100px; margin: 0 auto; }
+
+/* Window size control */
+.controls-row { padding: 12px; max-width: 1100px; margin: 0 auto; display:flex; gap:8px; align-items:center; }
+
+.top-bar { padding: 12px; max-width: 1100px; margin: 0 auto; }
+
+/* Playback buttons */
+.btn {
+    background: linear-gradient(180deg, #2b2b2b 0%, #1f1f1f 100%);
+    color: #e6f7ef;
+    border: 1px solid #333;
+    border-radius: 6px;
+    padding: 8px 12px;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: none;
+    transition: all 0.12s ease-in-out;
+    margin-right: 6px;
+    min-width: 56px;
+    flex: 4;                   /* each button expands */
+    margin: 0 8px;             /* spacing between buttons */    
+}
+
+.btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.45);
+    border-color: #00d19a;
+}
+
+.btn:active {
+    transform: translateY(0);
+    box-shadow: none;
+    border-color: #008f66;
+}
+
+/* Bigger buttons */
+.btn-big {
+    padding: 30px 100px;
+    font-size: 30px;
+    min-width: 80px;
+    flex: 4;                   /* each button expands */
+    margin: 0 8px;             /* spacing between buttons */
+
+}
+
+/* Play button emphasized */
+.btn-play {
+    background: linear-gradient(180deg, #00c78a 0%, #00a86b 100%);
+    color: #02120a;
+    border: 1px solid rgba(0,0,0,0.25);
+    box-shadow: 0 6px 18px rgba(0,199,138,0.12);
+    flex: 4;                   /* each button expands */
+    margin: 0 8px;             /* spacing between buttons */
+
+}
+
+.btn-play:hover { filter: brightness(1.03); }
+
+/* Small helper text area */
+.pointer-debug {
+    margin-left: 12px;
+    display: inline-block;
+    color: #bfeed8;
+    font-size: 13px;
+}
+
+/* Tabs container */
+.tabs-wrap { padding: 8px; max-width: 900px; margin: 0 auto; }
+
+/* ------------------------------------------------------------
+   BATTERY ROW (PACK + B1 + B2 + B3 + CYCLE ICON)
+------------------------------------------------------------ */
+.battery-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+/* ------------------------------------------------------------
+   BATTERY TILE (container for icon + label)
+------------------------------------------------------------ */
+.battery-tile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+
+    width: auto;
+    height: auto;
+    padding: 0;
+
+    flex-shrink: 0;   /* <-- REQUIRED */
+    border-radius: 12px;
+    transition: 0.2s ease;
+}
+
+/* Highlighted tile (active tab) */
+.battery-tile.highlight {
+    background-color: #003322;
+    border: 2px solid #00FFAA;
+    box-shadow: 0 0 12px rgba(0,255,170,0.12);
+}
+
+/* ------------------------------------------------------------
+   LABEL UNDER EACH BATTERY
+------------------------------------------------------------ */
+.battery-label {
+    margin-top: 10px;
+    font-size: 20px;
+    color: #00FFAA;
+    text-align: center;
+}
+
+/* ------------------------------------------------------------
+   CYCLE ARROW / TAB ICONS (if used)
+------------------------------------------------------------ */
+.battery-tab {
+    font-size: 32px;
+    padding: 10px 14px;
+    transform: scale(1.6);
+    transform-origin: center;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.battery-tab:hover {
+    transform: scale(1.55);
+    filter: brightness(1.2);
+}
+
+.cycle-arrow {
+    font-size: 28px;
+    padding: 6px 12px;
+    background: #111;
+    color: #00FFAA;
+    border: 2px solid #00FFAA;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.15s ease;
+}
+
+.cycle-arrow:hover {
+    background: #00FFAA;
+    color: #111;
+}
+
+#cycle-icon-wrapper {
+    width: 260px;
+    height: 260px;
+    flex-shrink: 0;
+}
+
+#cycle-icon-wrapper svg {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.cycle-tile {
+    width: 260px;     /* or 300px */
+    height: 260px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* IMPORTANT: break free from battery-tile column layout */
+    flex-direction: row !important;    
+}
+
+.cycle-tile img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.cycle-label {
+    margin-top: 10px;
+    font-size: 20px;
+    color: #00FFAA;
+    text-align: center;
+}
+/* Control bar container */
+.control-bar {
+    display: flex;
+    justify-content: space-between;   /* spread buttons across full width */
+    align-items: center;
+    gap: 14px;
+
+    max-width: 1100px;                /* match plot width */
+    margin: 0 auto;                   /* center container */
+    width: 100%;                      /* stretch to full width */
+    padding: 0 12px;                  /* match plot padding */
+}
+
+/* Base button style */
+.ctrl-btn {
+    font-size: 26px;
+    padding: 8px 14px;
+    background: #111;
+    color: #00FFAA;
+    border: 2px solid #00FFAA;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.15s ease;
+    user-select: none;
+}
+
+/* Make playback buttons expand to fill the row */
+.control-bar .ctrl-btn {
+    flex: 1;                /* each button grows equally */
+    min-width: 0;           /* prevents overflow */
+    padding: 14px 24px;     /* increase height + width */
+    font-size: 28px;        /* larger text */
+}
+
+/* Hover */
+.ctrl-btn:hover {
+    background: #00FFAA;
+    color: #111;
+}
+
+/* Active state (scrub mode or playing) */
+.ctrl-btn.active {
+    background: #00FFAA;
+    color: #111;
+    box-shadow: 0 0 10px #00FFAA;
+}
+
+/* Disabled state */
+.ctrl-btn.disabled {
+    opacity: 0.4;
+    cursor: default;
+}
