@@ -42,7 +42,7 @@
 		<Property Name="target.RTTarget.ApplicationPath" Type="Path">/home/lvuser/natinst/bin/startup.rtexe</Property>
 		<Property Name="target.RTTarget.EnableFileSharing" Type="Bool">true</Property>
 		<Property Name="target.RTTarget.IPAccess" Type="Str">+*</Property>
-		<Property Name="target.RTTarget.LaunchAppAtBoot" Type="Bool">false</Property>
+		<Property Name="target.RTTarget.LaunchAppAtBoot" Type="Bool">true</Property>
 		<Property Name="target.RTTarget.VIPath" Type="Path">/home/lvuser/natinst/bin</Property>
 		<Property Name="target.server.app.propertiesEnabled" Type="Bool">true</Property>
 		<Property Name="target.server.control.propertiesEnabled" Type="Bool">true</Property>
@@ -105,16 +105,16 @@ AddOutputFilter chunkFilter
 				<Property Name="crio.ModuleContainerType" Type="Str">crio.DAQModuleContainer</Property>
 			</Item>
 		</Item>
-		<Item Name="IT-M3400.lvlib" Type="Library" URL="../../IT-M3400/IT-M3400.lvlib"/>
 		<Item Name="PTestbed_CyclingRT.vi" Type="VI" URL="../../PTestbed_CyclingRT.vi"/>
 		<Item Name="Chrg_Dschrg_PTB.vi" Type="VI" URL="../../Chrg_Dschrg_PTB.vi"/>
 		<Item Name="Wait_PTB.vi" Type="VI" URL="../../../../Battery-Testing-Software-NHR/system_development/v0.1/Device-Interface-Layer/Wait_PTB.vi"/>
 		<Item Name="Filestructure.vi" Type="VI" URL="../../Filestructure.vi"/>
 		<Item Name="BatterySettings.vi" Type="VI" URL="../../BatterySettings.vi"/>
 		<Item Name="RelayControl.vi" Type="VI" URL="../../RelayControl.vi"/>
-		<Item Name="Gen_Daq.vi" Type="VI" URL="../../../../Battery-Testing-Software-NHR/system_development/v0.1/Device-Interface-Layer/Gen_Daq.vi"/>
 		<Item Name="Set Sense Voltage On.vi" Type="VI" URL="../../Set Sense Voltage On.vi"/>
 		<Item Name="DAQmx Clear Task.vi" Type="VI" URL="../../DAQmx Clear Task.vi"/>
+		<Item Name="Gen_Daq.vi" Type="VI" URL="../../../../Battery-Testing-Software-NHR/system_development/v0.1/Device-Interface-Layer/Gen_Daq.vi"/>
+		<Item Name="IT-M3400.lvlib" Type="Library" URL="../../IT-M3400/IT-M3400.lvlib"/>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="vi.lib" Type="Folder">
 				<Item Name="Error Cluster From Error Code.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Error Cluster From Error Code.vi"/>
@@ -517,7 +517,7 @@ AddOutputFilter chunkFilter
 				<Property Name="Bld_modifyLibraryFile" Type="Bool">true</Property>
 				<Property Name="Bld_previewCacheID" Type="Str">{1947A0DF-1275-41BA-8B11-0D4187A78DD1}</Property>
 				<Property Name="Bld_targetDestDir" Type="Path">/home/lvuser/natinst/bin</Property>
-				<Property Name="Bld_version.build" Type="Int">1</Property>
+				<Property Name="Bld_version.build" Type="Int">16</Property>
 				<Property Name="Bld_version.major" Type="Int">1</Property>
 				<Property Name="Destination[0].destName" Type="Str">startup.rtexe</Property>
 				<Property Name="Destination[0].path" Type="Path">/home/lvuser/natinst/bin/startup.rtexe</Property>
@@ -555,7 +555,7 @@ AddOutputFilter chunkFilter
 				<Property Name="Source[6].sourceInclusion" Type="Str">Include</Property>
 				<Property Name="Source[6].type" Type="Str">VI</Property>
 				<Property Name="Source[7].destinationIndex" Type="Int">0</Property>
-				<Property Name="Source[7].itemID" Type="Ref">/NI-cRIO-9054-01F17EC3/Gen_Daq.vi</Property>
+				<Property Name="Source[7].itemID" Type="Ref"></Property>
 				<Property Name="Source[7].sourceInclusion" Type="Str">Include</Property>
 				<Property Name="Source[7].type" Type="Str">VI</Property>
 				<Property Name="Source[8].destinationIndex" Type="Int">0</Property>
